@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expendio de Verduras, Frutas y Abarrotes</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         ENCABEZADO
+    =============================== -->
+    <header class="encabezado">
+
+        <div class="logo-contenedor">
+            <div class="logo-provisional">
+                LOGO
+            </div>
+
+            <div>
+                <h1>Expendio de Verduras, Frutas y Abarrotes</h1>
+                <p>Productos frescos y de calidad</p>
+            </div>
+        </div>
+
+        <button class="boton-pedido" onclick="irAlPedido()">
+            🛒 Hacer pedido
+        </button>
+
+    </header>
+
+
+    <!-- ==============================
+         CARRUSEL
+    =============================== -->
+    <section class="carrusel">
+
+        <div class="slide activo">
+            <div class="imagen-provisional">
+                <span>Imagen principal</span>
+            </div>
+
+            <div class="texto-slide">
+                <h2>Productos frescos todos los días</h2>
+                <p>Verduras, frutas y abarrotes para tu hogar.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="imagen-provisional">
+                <span>Imagen de productos</span>
+            </div>
+
+            <div class="texto-slide">
+                <h2>Calidad y buen precio</h2>
+                <p>Compra lo que necesitas de manera fácil.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="imagen-provisional">
+                <span>Imagen del expendio</span>
+            </div>
+
+            <div class="texto-slide">
+                <h2>Haz tu pedido en línea</h2>
+                <p>Selecciona tus productos y envía tu pedido.</p>
+            </div>
+        </div>
+
+        <button class="flecha anterior" onclick="cambiarSlide(-1)">
+            ❮
+        </button>
+
+        <button class="flecha siguiente" onclick="cambiarSlide(1)">
+            ❯
+        </button>
+
+        <div class="indicadores">
+            <span class="indicador activo" onclick="mostrarSlide(0)"></span>
+            <span class="indicador" onclick="mostrarSlide(1)"></span>
+            <span class="indicador" onclick="mostrarSlide(2)"></span>
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         PRODUCTOS
+    =============================== -->
+    <main>
+
+        <section id="productos" class="seccion">
+
+            <div class="titulo-seccion">
+                <h2>🛍️ Nuestros productos</h2>
+
+                <p>
+                    Consulta nuestros productos disponibles
+                    y sus precios.
+                </p>
+            </div>
+
+            <!-- Aquí JavaScript cargará los productos -->
+            <div id="lista-productos" class="lista-productos">
+
+                <div class="cargando">
+                    Cargando productos...
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             PREGUNTAS Y COMENTARIOS
+        =============================== -->
+        <section id="comentarios" class="seccion comentarios">
+
+            <div class="titulo-seccion">
+                <h2>💬 Preguntas y comentarios</h2>
+
+                <p>
+                    ¿Tienes alguna pregunta o comentario?
+                    Escríbenos.
+                </p>
+            </div>
+
+            <form id="formulario-comentario">
+
+                <div class="campo">
+                    <label for="nombre">
+                        Nombre
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Tu nombre"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="comentario">
+                        Mensaje
+                    </label>
+
+                    <textarea
+                        id="comentario"
+                        name="comentario"
+                        rows="5"
+                        placeholder="Escribe tu pregunta o comentario"
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="boton-principal">
+                    Enviar comentario
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ==============================
+             MISIÓN
+        =============================== -->
+        <section id="mision" class="seccion informacion">
+
+            <div class="titulo-seccion">
+                <h2>🎯 Misión</h2>
+            </div>
+
+            <p>
+                Ofrecer productos frescos, de calidad y a precios
+                accesibles, brindando un servicio amable y práctico
+                a nuestros clientes.
+            </p>
+
+        </section>
+
+
+        <!-- ==============================
+             VISIÓN
+        =============================== -->
+        <section id="vision" class="seccion informacion">
+
+            <div class="titulo-seccion">
+                <h2>🔭 Visión</h2>
+            </div>
+
+            <p>
+                Ser un expendio reconocido por la calidad de sus
+                productos, buen servicio y facilidad para realizar
+                compras.
+            </p>
+
+        </section>
+
+
+        <!-- ==============================
+             OBJETIVOS
+        =============================== -->
+        <section id="objetivos" class="seccion informacion">
+
+            <div class="titulo-seccion">
+                <h2>📌 Objetivos</h2>
+            </div>
+
+            <ul>
+                <li>Ofrecer productos frescos y de calidad.</li>
+                <li>Mantener precios competitivos.</li>
+                <li>Brindar una atención rápida y amable.</li>
+                <li>Facilitar los pedidos mediante medios digitales.</li>
+                <li>Mantener un buen control del inventario.</li>
+            </ul>
+
+        </section>
+
+
+        <!-- ==============================
+             SUCURSALES
+        =============================== -->
+        <section id="sucursales" class="seccion">
+
+            <div class="titulo-seccion">
+                <h2>📍 Nuestras sucursales</h2>
+
+                <p>
+                    Próximamente agregaremos las ubicaciones
+                    de nuestras sucursales.
+                </p>
+            </div>
+
+            <div class="sucursales">
+
+                <div class="tarjeta-sucursal">
+                    <h3>Sucursal principal</h3>
+                    <p>Dirección pendiente</p>
+                </div>
+
+                <div class="tarjeta-sucursal">
+                    <h3>Sucursal 2</h3>
+                    <p>Dirección pendiente</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         PIE DE PÁGINA
+    =============================== -->
+    <footer class="pie">
+
+        <div class="pie-contenido">
+
+            <div>
+                <h3>Expendio de Verduras, Frutas y Abarrotes</h3>
+
+                <p>
+                    Productos frescos y de calidad.
+                </p>
+            </div>
+
+
+            <div>
+                <h3>Contacto</h3>
+
+                <p>
+                    📱 WhatsApp:
+                    <a
+                        href="https://wa.me/5217712081335"
+                        target="_blank"
+                    >
+                        771 208 1335
+                    </a>
+                </p>
+            </div>
+
+
+            <div>
+                <h3>Redes sociales</h3>
+
+                <p>
+                    Facebook: Próximamente
+                </p>
+
+                <p>
+                    Instagram: Próximamente
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            © 2026 Expendio de Verduras, Frutas y Abarrotes
+        </div>
+
+    </footer>
+
+
+    <!-- ==============================
+         BOTÓN FLOTANTE DE PEDIDO
+    =============================== -->
+
+    <button
+        class="boton-flotante"
+        onclick="irAlPedido()"
+        title="Hacer pedido"
+    >
+        🛒
+    </button>
+
+
+    <!-- ==============================
+         JAVASCRIPT
+    =============================== -->
+
+    <script src="js/app.js"></script>
+    <script src="js/pedido.js"></script>
+
+</body>
+</html>
