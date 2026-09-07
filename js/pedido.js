@@ -1389,7 +1389,17 @@ function mostrarResumenFinal() {
         entregaTexto = direccion.value.trim();
     }
 
+// ==========================================
+// DIRECCIÓN
+// ==========================================
 
+const campoDireccion =
+    document.getElementById("direccion");
+
+const direccion =
+    campoDireccion
+        ? campoDireccion.value
+        : "";
     // ==========================================
     // UBICACIÓN
     // ==========================================
@@ -1743,47 +1753,49 @@ async function confirmarPedidoFinal() {
     // CREAR PEDIDO
     // ==========================================
 
-    const pedido = {
+const pedido = {
 
-        cliente: nombre,
+    cliente: nombre,
 
-        telefono: telefono,
+    telefono: telefono,
 
-        tipoEntrega: tipoEntrega,
+    tipoEntrega: tipoEntrega,
 
-        entrega: entrega,
+    entrega: entrega,
 
-        ubicacion: ubicacion,
+    direccion: direccion,
 
-        formaPago: formaPago,
+    ubicacion: ubicacion,
 
-        observaciones: observaciones,
+    formaPago: formaPago,
 
-        total: obtenerTotalCarrito(),
+    observaciones: observaciones,
 
-        productos: carrito.map(function(item) {
+    total: obtenerTotalCarrito(),
 
-            return {
+    productos: carrito.map(function(item) {
 
-                id: item.id,
+        return {
 
-                producto: item.producto,
+            id: item.id,
 
-                cantidad: Number(item.cantidad),
+            producto: item.producto,
 
-                unidad: item.unidad,
+            cantidad: Number(item.cantidad),
 
-                precioVenta: Number(item.precioVenta),
+            unidad: item.unidad,
 
-                subtotal:
-                    Number(item.cantidad) *
-                    Number(item.precioVenta)
+            precioVenta: Number(item.precioVenta),
 
-            };
+            subtotal:
+                Number(item.cantidad) *
+                Number(item.precioVenta)
 
-        })
+        };
 
-    };
+    })
+
+};
 
 
     // ==========================================
