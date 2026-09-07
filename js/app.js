@@ -4,9 +4,7 @@
 // ==========================================
 
 // URL DE TU GOOGLE APPS SCRIPT
-const API_URL =
-    "https://script.google.com/macros/s/AKfycbxbMPg2gjBNkkbrIfrUiGJgKxjuGs3UYXCkqkll7Nwy7XmPV-yCyS5pzFuYB3JW40U7Ew/exec";
-
+const API_URL = "https://script.google.com/macros/s/AKfycbyJi884UyrspXEgD4qUseu1WTxWBzKTaWgHpYVEvgQ2o9OuX6IybOQYi8Gw-KjJdyyqyg/exec";
 
 // ==========================================
 // VARIABLES
