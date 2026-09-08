@@ -2426,21 +2426,26 @@ function nuevoPedido() {
 
     actualizarCarrito();
 
+setTimeout(function() {
 
     const carritoSeccion =
-        document.getElementById(
-            "carrito-pedido"
-        );
+        document.getElementById("carrito-pedido");
 
-
-    if (carritoSeccion) {
-
-        carritoSeccion.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-
+    if (!carritoSeccion) {
+        return;
     }
+
+    const posicion =
+        carritoSeccion.getBoundingClientRect().top +
+        window.pageYOffset -
+        80;
+
+    window.scrollTo({
+        top: posicion,
+        behavior: "smooth"
+    });
+
+}, 300);
 
 }
 
@@ -2457,9 +2462,14 @@ function irAlPedido() {
         return;
     }
 
-    carritoSeccion.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+    const posicion =
+        carritoSeccion.getBoundingClientRect().top +
+        window.pageYOffset -
+        80;
+
+    window.scrollTo({
+        top: posicion,
+        behavior: "smooth"
     });
 
 }
