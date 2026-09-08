@@ -2369,7 +2369,79 @@ function mostrarPedidoRegistrado(pedido) {
     `;
 
 
-    // Actualizar inventario de la página
-    cargarProductos();
+// Actualizar inventario de la página
+cargarProductos();
+
+// Mantener la vista en "Pedido registrado"
+setTimeout(function() {
+
+    const confirmacion =
+        document.getElementById("datos-pedido");
+
+    if (confirmacion) {
+
+        confirmacion.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }
+
+}, 700);
+
+// ==========================================
+// NUEVO PEDIDO
+// ==========================================
+
+function nuevoPedido() {
+
+    carrito = [];
+
+    datosPedidoTemporal = {
+
+        nombre: "",
+        telefono: "",
+        tipoEntrega: "",
+        entrega: "",
+        direccion: "",
+        ubicacion: "",
+        formaPago: "",
+        observaciones: ""
+
+    };
+
+
+    const datosPedido =
+        document.getElementById(
+            "datos-pedido"
+        );
+
+
+    if (datosPedido) {
+
+        datosPedido.remove();
+
+    }
+
+
+    actualizarCarrito();
+
+
+    const carritoSeccion =
+        document.getElementById(
+            "carrito-pedido"
+        );
+
+
+    if (carritoSeccion) {
+
+        carritoSeccion.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }
+
+}
 
 }
