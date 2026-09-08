@@ -2359,7 +2359,7 @@ function mostrarPedidoRegistrado(pedido) {
 
             <button
                 class="boton-secundario"
-                onclick="location.reload()"
+                onclick="nuevoPedido()"
             >
                 🛒 Nuevo pedido
             </button>
