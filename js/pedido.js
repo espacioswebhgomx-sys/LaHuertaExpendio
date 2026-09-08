@@ -2393,7 +2393,7 @@ setTimeout(function() {
 // NUEVO PEDIDO
 // ==========================================
 
-function nuevoPedido() {
+window.nuevoPedido = function() {
 
     carrito = [];
 
