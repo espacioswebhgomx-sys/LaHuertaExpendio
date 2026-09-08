@@ -324,6 +324,19 @@ function irAlPedido() {
     }
 
 }
+// ==========================================
+// BOTÓN "IR A PRODUCTOS"
+// ==========================================
+function irAProductos() {
+    const productos = document.getElementById("productos");
+
+    if (productos) {
+        productos.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+}
 
 
 // ==========================================
