@@ -2410,42 +2410,30 @@ function nuevoPedido() {
 
     };
 
-
     const datosPedido =
-        document.getElementById(
-            "datos-pedido"
-        );
-
+        document.getElementById("datos-pedido");
 
     if (datosPedido) {
-
         datosPedido.remove();
-
     }
-
 
     actualizarCarrito();
 
-setTimeout(function() {
+    setTimeout(function() {
 
-    const carritoSeccion =
-        document.getElementById("carrito-pedido");
+        const carritoSeccion =
+            document.getElementById("carrito-pedido");
 
-    if (!carritoSeccion) {
-        return;
-    }
+        if (carritoSeccion) {
 
-    const posicion =
-        carritoSeccion.getBoundingClientRect().top +
-        window.pageYOffset -
-        80;
+            carritoSeccion.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
 
-    window.scrollTo({
-        top: posicion,
-        behavior: "smooth"
-    });
+        }
 
-}, 300);
+    }, 300);
 
 }
 
