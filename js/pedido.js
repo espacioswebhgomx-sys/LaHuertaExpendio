@@ -2444,4 +2444,24 @@ function nuevoPedido() {
 
 }
 
+// ==========================================
+// IR AL PEDIDO DESDE EL BOTÓN FLOTANTE
+// ==========================================
+
+function irAlPedido() {
+
+    const carritoSeccion =
+        document.getElementById("carrito-pedido");
+
+    if (!carritoSeccion) {
+        return;
+    }
+
+    carritoSeccion.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
 }
