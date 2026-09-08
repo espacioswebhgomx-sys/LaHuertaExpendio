@@ -2453,25 +2453,24 @@ setTimeout(function() {
 // IR AL PEDIDO DESDE EL BOTÓN FLOTANTE
 // ==========================================
 
-function irAlPedido() {
+//function irAlPedido() {
 
-    const carritoSeccion =
-        document.getElementById("carrito-pedido");
+//    const carritoSeccion =
+//        document.getElementById("carrito-pedido");
 
-    if (!carritoSeccion) {
-        return;
-    }
+//    if (!carritoSeccion) {
+//        return;
+//    }
 
-    const posicion =
-        carritoSeccion.getBoundingClientRect().top +
-        window.pageYOffset -
-        80;
+ //   const posicion =
+ //       carritoSeccion.getBoundingClientRect().top +
+ //       window.pageYOffset -
+ //       80;
 
-    window.scrollTo({
-        top: posicion,
-        behavior: "smooth"
-    });
+ //   window.scrollTo({
+ //       top: posicion,
+ //       behavior: "smooth"
+ //   });
 
-}
-
-}
+//  }
+//}
