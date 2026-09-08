@@ -311,13 +311,14 @@ function cambiarSlide(direccion) {
 
 function irAlPedido() {
 
-    const productosSeccion =
-        document.getElementById("productos");
+    const carritoSeccion =
+        document.getElementById("carrito-pedido");
 
-    if (productosSeccion) {
+    if (carritoSeccion) {
 
-        productosSeccion.scrollIntoView({
-            behavior: "smooth"
+        carritoSeccion.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
         });
 
     }
